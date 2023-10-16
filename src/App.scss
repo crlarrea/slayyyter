@@ -1,0 +1,100 @@
+@import "UISystem.scss";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.home {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: $black;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  article {
+    display: flex;
+    &:first-of-type {
+      position: relative;
+      flex: 0 0 40%;
+      background: {
+        image: url("../src/assets/img/slayyyter_logo.png");
+        repeat: no-repeat;
+        size: contain;
+      }
+
+      img {
+        height: 110%;
+        position: absolute;
+        animation: slideRight 15s linear forwards;
+      }
+    }
+    &:last-of-type {
+      row-gap: $h;
+      padding: $xh;
+      flex: 0 0 60%;
+      flex-flow: column nowrap;
+      iframe {
+        filter: drop-shadow(20px 20px 250px rgba($pink900, 0.2));
+      }
+      // background-color: blue;
+    }
+  }
+}
+
+.vinyls {
+  z-index: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  column-gap: $m;
+
+  img {
+    cursor: pointer;
+    height: 250px;
+    &:hover {
+      transition: all 0.3s;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.social-media {
+  color: rgba(white,0.5);
+  font:{
+    size: $xxl;
+  }
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    column-gap: $s;
+    li{
+        &:hover{
+            transform: scale(1.2);
+            color: white;
+
+        }
+        a{
+            color: inherit;
+            text:{
+                decoration: none;
+            }
+           
+        }
+    }
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    right: -35%;
+  }
+  100% {
+    right: -25%;
+  }
+}
