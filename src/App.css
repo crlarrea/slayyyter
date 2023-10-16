@@ -46,6 +46,8 @@ html {
 }
 
 .vinyls {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
   z-index: 0;
   display: flex;
   flex-flow: row wrap;
@@ -63,7 +65,7 @@ html {
 
 .social-media {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 36px;
+  font-size: 21px;
 }
 .social-media ul {
   display: flex;
