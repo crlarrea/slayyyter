@@ -58,6 +58,7 @@ main div:last-of-type {
   flex-flow: column nowrap;
   row-gap: 48px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .background {
@@ -81,19 +82,37 @@ main div:last-of-type {
   column-gap: 48px;
 }
 .vinyls article {
+  display: flex;
   row-gap: 16px;
 }
 .vinyls article:first-of-type {
   flex: 0 0 100%;
 }
-.vinyls article p {
+.vinyls article:nth-of-type(2) {
+  flex-flow: row nowrap;
+  column-gap: 16px;
+  overflow-x: scroll;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
+}
+.vinyls article:nth-of-type(2)::-webkit-scrollbar {
+  display: none;
+}
+.vinyls article:nth-of-type(2) div {
+  height: 250px;
+}
+.vinyls article:nth-of-type(2) div p {
   text-transform: capitalize;
 }
-.vinyls article img {
+.vinyls article:nth-of-type(2) div img {
   cursor: pointer;
   width: 250px;
+  height: 250px;
 }
-.vinyls article img:hover {
+.vinyls article:nth-of-type(2) div img:hover {
   transition: all 0.3s;
   transform: scale(1.1);
 }
@@ -207,6 +226,17 @@ h2 {
   }
   100% {
     transform: translateX(20%);
+  }
+}
+@media only screen and (min-device-width: 220px) and (max-device-width: 767px) {
+  main {
+    flex-flow: column nowrap;
+    height: auto;
+    padding: 14px;
+  }
+  .background img {
+    height: 50vh;
+    margin-bottom: -72px;
   }
 }
 

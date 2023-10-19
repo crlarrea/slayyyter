@@ -1,0 +1,17 @@
+@media only screen and (min-device-width: 220px) and (max-device-width: 767px) {
+  main {
+    flex-flow: column nowrap;
+    height: auto;
+
+    padding: $s;
+  }
+
+  .background {
+    img {
+      height: 50vh;
+      margin: {
+        bottom: -$xh;
+      }
+    }
+  }
+}

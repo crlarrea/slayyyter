@@ -37,6 +37,7 @@ main {
       flex-flow: column nowrap;
       row-gap: $h;
       overflow-y: scroll;
+      overflow-x: hidden;
     }
   }
 }
@@ -67,23 +68,35 @@ main {
   padding: $h;
   column-gap: $h;
   article {
-    &:first-of-type{
+    display: flex;
+    &:first-of-type {
       flex: 0 0 100%;
     }
-    
+
     row-gap: $m;
-    
-    p {
-      text: {
-        transform: capitalize;
-      }
-    }
-    img {
-      cursor: pointer;
-      width: 250px;
-      &:hover {
-        transition: all 0.3s;
-        transform: scale(1.1);
+    &:nth-of-type(2) {
+      flex-flow: row nowrap;
+      column-gap: $m;
+      overflow-x: scroll;
+
+      @include hideScrollbar;
+      div {
+        height: 250px;
+        p {
+          text: {
+            transform: capitalize;
+          }
+        }
+        img {
+          cursor: pointer;
+          width: 250px;
+          height: 250px;
+
+          &:hover {
+            transition: all 0.3s;
+            transform: scale(1.1);
+          }
+        }
       }
     }
 
@@ -91,8 +104,8 @@ main {
       flex: 0 0 100%;
       display: flex;
       flex-flow: column nowrap;
-      align-items: flex-start;      
-      
+      align-items: flex-start;
+
       h3 {
         font: {
           family: "Roboto Black";
@@ -214,7 +227,6 @@ main {
 }
 
 .tours {
-
 }
 h2 {
   text: {
@@ -233,3 +245,5 @@ h2 {
     transform: translateX(20%);
   }
 }
+
+@import "Mobile.scss";
