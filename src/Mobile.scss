@@ -16,6 +16,19 @@
   }
 
   .about{
+    article{
+        padding:{
+            right: $xxs;
+            bottom:$xxl;
+        }
+        p{
+            margin:{
+                
+                bottom:$xh;
+            }
+        }
+        
+    }
     background:{
         size: contain;
         position: 0 100%;

@@ -4,7 +4,7 @@ import slayyyter from "../assets/img/slytr.png";
 export const Background = () => {
   return (
     <section className="background">
-      <img src={slayyyter} />
+      <img src={slayyyter} loading="lazy"/>
     </section>
   );
 };

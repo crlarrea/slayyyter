@@ -20,7 +20,7 @@ export const Vinyls = () => {
                 updateAlbum(entry);
               }}
             >
-              <img src={entry.image} />
+              <img src={entry.image} loading="lazy"/>
               {/* <p>{entry.name}</p> */}
             </div>
           );
