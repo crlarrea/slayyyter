@@ -238,6 +238,10 @@ h2 {
     height: 50vh;
     margin-bottom: -72px;
   }
+  .about {
+    background-size: contain;
+    background-position: 0 100%;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */
