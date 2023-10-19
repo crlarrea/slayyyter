@@ -4,8 +4,10 @@ import {
   AiOutlineInstagram,
 } from "react-icons/ai";
 
-import vinyl1 from '../img/vinyl_1.png';
-
+import vinyl1 from "../img/vinyl_1.png";
+import vinyl2 from "../img/vinyl_2.png";
+import vinyl3 from "../img/vinyl_3.png";
+import cd1 from "../img/cd.png";
 const socialMedia = [
   {
     name: "webs",
@@ -34,5 +36,83 @@ const socialMedia = [
   //   },
 ];
 
-const albums = [{ name: "starfuck vinyl", price: 30, image: vinyl1 }];
-export { socialMedia, albums};
+const albums = [
+  {
+    name: "starfucker vinyl - glass",
+    tracks: [
+      "I Love Hollywood!",
+      "Miss Belladonna",
+      "Dramatic",
+      "My Body",
+      "Memories Of You",
+      "Rhinestone Heart",
+      "Erotic Electronic",
+      "Purrr",
+      "Plastic",
+      "Girl Like Me",
+      "Tear Me Open",
+      "Out Of Time",
+    ],
+    price: 30,
+    image: vinyl1,
+  },
+  {
+    name: "starfucker vinyl - transparent mauve",
+    tracks: [
+      "I Love Hollywood!",
+      "Miss Belladonna",
+      "Dramatic",
+      "My Body",
+      "Memories Of You",
+      "Rhinestone Heart",
+      "Erotic Electronic",
+      "Purrr",
+      "Plastic",
+      "Girl Like Me",
+      "Tear Me Open",
+      "Out Of Time",
+    ],
+    price: 30,
+    image: vinyl2,
+  },
+  {
+    name: "troubled paradise vinyl - transparent",
+    tracks: [
+      "Track List:",
+      "Self Destruct (feat. Wuki)",
+      "Venom",
+      "Throatzilla",
+      "Dog House",
+      "Butterflies...",
+      "Troubled Paradise",
+      "Clouds",
+      "Cowboys",
+      "Serial Killer",
+      "Over This!",
+      "Villain",
+      "Letters",
+    ],
+    price: 30,
+    image: vinyl3,
+  },
+  {
+    name: "starfucker CD",
+    tracks: [
+      "I Love Hollywood!",
+      "Miss Belladonna",
+      "Dramatic",
+      "My Body",
+      "Memories Of You",
+      "Rhinestone Heart",
+      "Erotic Electronic",
+      "Purrr",
+      "Plastic",
+      "Girl Like Me",
+      "Tear Me Open",
+      "Out Of Time",
+    ],
+    price: 15,
+    image: cd1,
+  },
+];
+export { socialMedia, albums };

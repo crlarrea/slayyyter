@@ -3,17 +3,15 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: black;
-  font:{
-    family: 'Roboto Regular';
-    size:$m;
+  font: {
+    family: "Roboto Regular";
+    size: $m;
   }
-}
-html {
-  scroll-behavior: smooth;
 }
 
 main {
@@ -52,7 +50,6 @@ main {
     image: url("../src/assets/img/slayyyter_logo.png");
     repeat: no-repeat;
     size: contain;
-
   }
 
   img {
@@ -65,19 +62,67 @@ main {
   flex: 0 0 60%;
   background-color: rgba(white, 0.1);
   border-radius: $xxs;
-  z-index: 0;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  column-gap: $m;
-
+  padding: $h;
+  column-gap: $h;
   article {
+    &:first-of-type{
+      flex: 0 0 100%;
+    }
+    
+    row-gap: $m;
+    
+    p {
+      text: {
+        transform: capitalize;
+      }
+    }
     img {
       cursor: pointer;
-      height: 250px;
+      width: 250px;
       &:hover {
         transition: all 0.3s;
         transform: scale(1.1);
+      }
+    }
+
+    &:last-of-type {
+      flex: 0 0 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-start;      
+      
+      h3 {
+        font: {
+          family: "Roboto Black";
+        }
+        text: {
+          transform: capitalize;
+        }
+      }
+      span {
+        padding: $xxs;
+        align-self: flex-start;
+        border: 2px dashed white;
+      }
+      ol {
+        list-style-position: inside;
+      }
+      a {
+        align-self: flex-end;
+        transition: all 0.3s;
+        color: white;
+        text: {
+          decoration: none;
+          transform: uppercase;
+        }
+        border: 2px solid white;
+        padding: $xxs $xxl;
+        &:hover {
+          background-color: white;
+          color: $black;
+        }
       }
     }
   }
@@ -112,39 +157,72 @@ main {
 }
 .about {
   display: flex;
-  flex: 1 0 400px;
-  flex-flow: column nowrap;
-  color: white;
-  row-gap: $m;
-  padding: $h;
-  border-radius: $xxs;;
+  border-radius: $xxs;
   background: {
     image: url("./assets/img/slayyyter.png");
     size: cover;
     repeat: no-repeat;
-    position: 0 -50px;
-    color: rgba($pink500, 0.1)  
 
+    color: rgba($pink500, 0.1);
   }
-  h2{
-    max-width: 25ch;;
-  }
-  
-  
-  span {
-    color: $pink900;
-  }
-  p {
-    max-width: 35ch;
+
+  article {
+    flex: 0 0 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: $m;
+
+    padding: $h;
+    background-color: rgba($black, 0.5);
+    h2 {
+      max-width: 15ch;
+    }
+    span {
+      color: $pink900;
+      font: {
+        family: "Roboto Bold Italic";
+      }
+      &:last-of-type {
+        text: {
+          transform: uppercase;
+        }
+      }
+    }
+    p {
+      color: white;
+      max-width: 30ch;
+      padding: $xl;
+      line-height: $xl;
+      border-left: 2px solid rgba($pink900, 0.6);
+    }
+    a {
+      align-self: flex-end;
+      transition: all 0.3s;
+      color: white;
+      text: {
+        decoration: none;
+        transform: uppercase;
+      }
+      border: 2px solid white;
+      padding: $xxs $xxl;
+      &:hover {
+        background-color: white;
+        color: $black;
+      }
+    }
   }
 }
 
+.tours {
+
+}
 h2 {
   text: {
     transform: uppercase;
   }
-  font:{
+  font: {
     size: $xxl;
+    family: "Roboto Black";
   }
 }
 @keyframes slideRight {

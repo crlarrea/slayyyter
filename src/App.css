@@ -6,20 +6,25 @@
   font-family: "Roboto Regular";
   src: url("./assets/fonts/Roboto-Regular.ttf");
 }
+@font-face {
+  font-family: "Roboto Black";
+  src: url("./assets/fonts/Roboto-Black.ttf");
+}
+@font-face {
+  font-family: "Roboto Bold Italic";
+  src: url("./assets/fonts/Roboto-BoldItalic.ttf");
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: black;
   font-family: "Roboto Regular";
   font-size: 16px;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 main {
@@ -70,19 +75,58 @@ main div:last-of-type {
   flex: 0 0 60%;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  z-index: 0;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  column-gap: 16px;
+  padding: 48px;
+  column-gap: 48px;
+}
+.vinyls article {
+  row-gap: 16px;
+}
+.vinyls article:first-of-type {
+  flex: 0 0 100%;
+}
+.vinyls article p {
+  text-transform: capitalize;
 }
 .vinyls article img {
   cursor: pointer;
-  height: 250px;
+  width: 250px;
 }
 .vinyls article img:hover {
   transition: all 0.3s;
   transform: scale(1.1);
+}
+.vinyls article:last-of-type {
+  flex: 0 0 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+.vinyls article:last-of-type h3 {
+  font-family: "Roboto Black";
+  text-transform: capitalize;
+}
+.vinyls article:last-of-type span {
+  padding: 10px;
+  align-self: flex-start;
+  border: 2px dashed white;
+}
+.vinyls article:last-of-type ol {
+  list-style-position: inside;
+}
+.vinyls article:last-of-type a {
+  align-self: flex-end;
+  transition: all 0.3s;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid white;
+  padding: 10px 36px;
+}
+.vinyls article:last-of-type a:hover {
+  background-color: white;
+  color: #0e0e0e;
 }
 
 .social-media {
@@ -106,31 +150,55 @@ main div:last-of-type {
 
 .about {
   display: flex;
-  flex: 1 0 400px;
-  flex-flow: column nowrap;
-  color: white;
-  row-gap: 16px;
-  padding: 48px;
   border-radius: 10px;
   background-image: url("./assets/img/slayyyter.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0 -50px;
   background-color: rgba(250, 178, 249, 0.1);
 }
-.about h2 {
-  max-width: 25ch;
+.about article {
+  flex: 0 0 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 16px;
+  padding: 48px;
+  background-color: rgba(14, 14, 14, 0.5);
 }
-.about span {
+.about article h2 {
+  max-width: 15ch;
+}
+.about article span {
   color: #fe003c;
+  font-family: "Roboto Bold Italic";
 }
-.about p {
-  max-width: 35ch;
+.about article span:last-of-type {
+  text-transform: uppercase;
+}
+.about article p {
+  color: white;
+  max-width: 30ch;
+  padding: 21px;
+  line-height: 21px;
+  border-left: 2px solid rgba(254, 0, 60, 0.6);
+}
+.about article a {
+  align-self: flex-end;
+  transition: all 0.3s;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid white;
+  padding: 10px 36px;
+}
+.about article a:hover {
+  background-color: white;
+  color: #0e0e0e;
 }
 
 h2 {
   text-transform: uppercase;
   font-size: 36px;
+  font-family: "Roboto Black";
 }
 
 @keyframes slideRight {
