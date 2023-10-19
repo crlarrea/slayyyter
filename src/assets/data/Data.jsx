@@ -4,6 +4,8 @@ import {
   AiOutlineInstagram,
 } from "react-icons/ai";
 
+import vinyl1 from '../img/vinyl_1.png';
+
 const socialMedia = [
   {
     name: "webs",
@@ -32,4 +34,5 @@ const socialMedia = [
   //   },
 ];
 
-export { socialMedia };
+const albums = [{ name: "starfuck vinyl", price: 30, image: vinyl1 }];
+export { socialMedia, albums};

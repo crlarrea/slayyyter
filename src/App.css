@@ -2,50 +2,72 @@
   font-family: "Homemade Apple Regular";
   src: url("./assets/fonts/HomemadeApple-Regular.ttf");
 }
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("./assets/fonts/Roboto-Regular.ttf");
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+body {
+  background-color: black;
+  font-family: "Roboto Regular";
+  font-size: 16px;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-.home {
+main {
   display: flex;
   flex-flow: row wrap;
-  background-color: #0e0e0e;
-  width: 100vw;
+  justify-content: space-between;
+  padding: 72px;
+  background-color: black;
   height: 100vh;
   overflow: hidden;
+  color: white;
 }
-.home article {
+main div {
+  height: 100vh;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
   display: flex;
 }
-.home article:first-of-type {
-  position: relative;
-  flex: 0 0 40%;
+main div::-webkit-scrollbar {
+  display: none;
+}
+main div:first-of-type {
+  flex: 0 0 30%;
+}
+main div:last-of-type {
+  filter: drop-shadow(20px 20px 250px rgba(254, 0, 60, 0.4));
+  flex: 0 0 50%;
+  flex-flow: column nowrap;
+  row-gap: 48px;
+  overflow-y: scroll;
+}
+
+.background {
+  flex: 0 0 30%;
   background-image: url("../src/assets/img/slayyyter_logo.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
-.home article:first-of-type img {
+.background img {
   height: 110%;
-  position: absolute;
   animation: slideRight 15s linear forwards;
-}
-.home article:last-of-type {
-  row-gap: 48px;
-  padding: 72px;
-  flex: 0 0 60%;
-  flex-flow: column nowrap;
-}
-.home article:last-of-type iframe {
-  filter: drop-shadow(20px 20px 250px rgba(254, 0, 60, 0.2));
 }
 
 .vinyls {
+  flex: 0 0 60%;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   z-index: 0;
@@ -54,11 +76,11 @@ html {
   justify-content: center;
   column-gap: 16px;
 }
-.vinyls img {
+.vinyls article img {
   cursor: pointer;
   height: 250px;
 }
-.vinyls img:hover {
+.vinyls article img:hover {
   transition: all 0.3s;
   transform: scale(1.1);
 }
@@ -82,12 +104,41 @@ html {
   text-decoration: none;
 }
 
+.about {
+  display: flex;
+  flex: 1 0 400px;
+  flex-flow: column nowrap;
+  color: white;
+  row-gap: 16px;
+  padding: 48px;
+  border-radius: 10px;
+  background-image: url("./assets/img/slayyyter.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -50px;
+  background-color: rgba(250, 178, 249, 0.1);
+}
+.about h2 {
+  max-width: 25ch;
+}
+.about span {
+  color: #fe003c;
+}
+.about p {
+  max-width: 35ch;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 36px;
+}
+
 @keyframes slideRight {
   0% {
-    right: -35%;
+    transform: translateX(30%);
   }
   100% {
-    right: -25%;
+    transform: translateX(20%);
   }
 }
 

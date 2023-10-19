@@ -24,3 +24,18 @@ $black: #0e0e0e;
   font-family: "Homemade Apple Regular";
   src: url("./assets/fonts/HomemadeApple-Regular.ttf");
 }
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("./assets/fonts/Roboto-Regular.ttf");
+}
+
+@mixin hideScrollbar {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
+}

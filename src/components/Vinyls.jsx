@@ -1,13 +1,24 @@
 import React from "react";
-import vinyl1 from "../assets/img/vinyl_1.png";
-import vinyl2 from "../assets/img/vinyl_2.png";
-import cd from "../assets/img/cd.png";
+import { albums } from "../assets/data/Data";
 export const Vinyls = () => {
   return (
     <section className="vinyls">
-      <img src={vinyl1} />
-      <img src={vinyl2} />
-      <img src={cd} />
+      {albums.map((entry, index) => {
+        return (
+          <article>
+            <img src={entry.image} />
+            <p>
+              {entry.name}{" "}
+              <span>
+                {Intl.NumberFormat("en-US", {
+                  style: "currency",
+                  currency: "USD",
+                }).format(entry.price)}
+              </span>
+            </p>
+          </article>
+        );
+      })}
     </section>
   );
 };

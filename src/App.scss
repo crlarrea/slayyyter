@@ -5,69 +5,87 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: black;
+  font:{
+    family: 'Roboto Regular';
+    size:$m;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
 
-.home {
+main {
   display: flex;
   flex-flow: row wrap;
-  background-color: $black;
-  width: 100vw;
+  justify-content: space-between;
+  padding: $xh;
+  background-color: black;
   height: 100vh;
   overflow: hidden;
-  article {
+  color: white;
+
+  div {
+    height: 100vh;
+    @include hideScrollbar;
     display: flex;
     &:first-of-type {
-      position: relative;
-      flex: 0 0 40%;
-      background: {
-        image: url("../src/assets/img/slayyyter_logo.png");
-        repeat: no-repeat;
-        size: contain;
-      }
-
-      img {
-        height: 110%;
-        position: absolute;
-        animation: slideRight 15s linear forwards;
-      }
+      flex: 0 0 30%;
     }
     &:last-of-type {
-      row-gap: $h;
-      padding: $xh;
-      flex: 0 0 60%;
+      filter: drop-shadow(20px 20px 250px rgba($pink900, 0.4));
+      flex: 0 0 50%;
       flex-flow: column nowrap;
-      iframe {
-        filter: drop-shadow(20px 20px 250px rgba($pink900, 0.2));
-      }
-      // background-color: blue;
+      row-gap: $h;
+      overflow-y: scroll;
     }
   }
 }
 
+// iframe {
+//   filter: drop-shadow(20px 20px 250px rgba($pink900, 0.2));
+// }
+.background {
+  flex: 0 0 30%;
+  background: {
+    image: url("../src/assets/img/slayyyter_logo.png");
+    repeat: no-repeat;
+    size: contain;
+
+  }
+
+  img {
+    height: 110%;
+    animation: slideRight 15s linear forwards;
+  }
+}
+
 .vinyls {
-    background-color: rgba(white, 0.1);
-    border-radius: $xxs;
+  flex: 0 0 60%;
+  background-color: rgba(white, 0.1);
+  border-radius: $xxs;
   z-index: 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   column-gap: $m;
 
-  img {
-    cursor: pointer;
-    height: 250px;
-    &:hover {
-      transition: all 0.3s;
-      transform: scale(1.1);
+  article {
+    img {
+      cursor: pointer;
+      height: 250px;
+      &:hover {
+        transition: all 0.3s;
+        transform: scale(1.1);
+      }
     }
   }
 }
 
 .social-media {
-  color: rgba(white,0.5);
-  font:{
+  color: rgba(white, 0.5);
+  font: {
     size: $xl;
   }
   ul {
@@ -75,28 +93,65 @@ html {
     justify-content: flex-end;
     list-style-type: none;
     column-gap: $s;
-    li{
-        &:hover{
-            transform: scale(1.2);
-            color: white;
-
+    li {
+      &:hover {
+        transform: scale(1.2);
+        color: white;
+      }
+      a {
+        color: inherit;
+        text: {
+          decoration: none;
         }
-        a{
-            color: inherit;
-            text:{
-                decoration: none;
-            }
-           
-        }
+      }
     }
   }
 }
 
+.spotify {
+}
+.about {
+  display: flex;
+  flex: 1 0 400px;
+  flex-flow: column nowrap;
+  color: white;
+  row-gap: $m;
+  padding: $h;
+  border-radius: $xxs;;
+  background: {
+    image: url("./assets/img/slayyyter.png");
+    size: cover;
+    repeat: no-repeat;
+    position: 0 -50px;
+    color: rgba($pink500, 0.1)  
+
+  }
+  h2{
+    max-width: 25ch;;
+  }
+  
+  
+  span {
+    color: $pink900;
+  }
+  p {
+    max-width: 35ch;
+  }
+}
+
+h2 {
+  text: {
+    transform: uppercase;
+  }
+  font:{
+    size: $xxl;
+  }
+}
 @keyframes slideRight {
   0% {
-    right: -35%;
+    transform: translateX(30%);
   }
   100% {
-    right: -25%;
+    transform: translateX(20%);
   }
 }

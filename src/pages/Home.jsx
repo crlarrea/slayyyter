@@ -1,22 +1,23 @@
 import React from "react";
-import slayyyter from "../assets/img/slytr.png";
 import { Spotify } from "../components/Spotify";
 import { Vinyls } from "../components/Vinyls";
-import { Instagram } from "../components/Instagram";
 import { SocialMedia } from "../components/SocialMedia";
+import { Background } from "../components/Background";
+import { About } from "../components/About";
 
 export const Home = () => {
   return (
-    <section className="home">
-      <article>
-        <img src={slayyyter} className="bkg" />
-      </article>
-      <article>
+    <main>
+      <div>
+        <Background />
+      </div>
+      <div>
         <SocialMedia />
+        <About /> 
         <Spotify />
         <Vinyls />
-        <Instagram />
-      </article>
-    </section>
+        {/* <Instagram /> */}
+      </div>
+    </main>
   );
 };
