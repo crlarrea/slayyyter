@@ -32,11 +32,13 @@ main {
       flex: 0 0 30%;
     }
     &:last-of-type {
+      
       filter: drop-shadow(20px 20px 250px rgba($pink900, 0.4));
       flex: 0 0 50%;
       flex-flow: column nowrap;
       row-gap: $h;
       overflow-y: scroll;
+      padding-top: 350px;
     }
   }
 }
@@ -203,7 +205,7 @@ main {
     }
     p {
       color: white;
-      max-width: 30ch;
+      max-width: 35ch;
       padding: $xl;
       line-height: $xl;
       border-left: 2px solid rgba($pink900, 0.6);

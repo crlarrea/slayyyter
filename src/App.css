@@ -58,6 +58,7 @@ main div:last-of-type {
   flex-flow: column nowrap;
   row-gap: 48px;
   overflow-y: scroll;
+  padding-top: 350px;
 }
 
 .background {
@@ -194,7 +195,7 @@ main div:last-of-type {
 }
 .about article p {
   color: white;
-  max-width: 30ch;
+  max-width: 35ch;
   padding: 21px;
   line-height: 21px;
   border-left: 2px solid rgba(254, 0, 60, 0.6);
@@ -233,6 +234,9 @@ h2 {
     height: auto;
     padding: 14px;
   }
+  main div:last-of-type {
+    padding-top: 0;
+  }
   .background img {
     height: 50vh;
     margin-bottom: -72px;
@@ -247,6 +251,12 @@ h2 {
   }
   .about article p {
     margin-bottom: 72px;
+  }
+  .social-media {
+    top: 16px;
+    right: 16px;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
   }
 }
 

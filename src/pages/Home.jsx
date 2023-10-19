@@ -13,7 +13,6 @@ export const Home = () => {
         <Background />
       </div>
       <div>
-        <SocialMedia />
         <About /> 
         <Spotify />
         <Vinyls />

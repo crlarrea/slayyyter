@@ -6,6 +6,9 @@ export const Tours = () => {
         <article>
             <h2>Tour dates</h2>
         </article>
+        <artile>
+            date
+        </artile>
     </section>
   )
 }

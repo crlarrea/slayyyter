@@ -4,6 +4,11 @@
     height: auto;
 
     padding: $s;
+    div{
+        &:last-of-type{
+            padding-top:0;
+        }
+    }
   }
 
   .background {
@@ -33,5 +38,13 @@
         size: contain;
         position: 0 100%;
     }
+  }
+  .social-media {
+    top:$m;
+    right:$m;
+    
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+    
   }
 }
