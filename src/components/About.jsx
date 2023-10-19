@@ -17,9 +17,6 @@ export const About = () => {
         </p>
         <a href='#tours'>tour</a>
       </article>
-      <article>
-        hellod
-      </article>
     </section>
   );
 };

@@ -37,7 +37,6 @@ main {
       flex-flow: column nowrap;
       row-gap: $h;
       overflow-y: scroll;
-      overflow-x: hidden;
     }
   }
 }
@@ -142,25 +141,26 @@ main {
 }
 
 .social-media {
+  position: absolute;
+  bottom: $xh;
   color: rgba(white, 0.5);
   font: {
     size: $xl;
   }
-  ul {
-    display: flex;
-    justify-content: flex-end;
-    list-style-type: none;
-    column-gap: $s;
-    li {
-      &:hover {
-        transform: scale(1.2);
-        color: white;
-      }
-      a {
-        color: inherit;
-        text: {
-          decoration: none;
-        }
+
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  column-gap: $s;
+  li {
+    &:hover {
+      transform: scale(1.2);
+      color: white;
+    }
+    a {
+      color: inherit;
+      text: {
+        decoration: none;
       }
     }
   }

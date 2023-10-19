@@ -2,8 +2,8 @@ import React from "react";
 import { socialMedia } from "../assets/data/Data";
 export const SocialMedia = () => {
   return (
-    <section className="social-media">
-      <ul>
+    
+      <ul className="social-media">
         {socialMedia.map((entry) => {
           return (
             <li key={entry.name}>
@@ -14,6 +14,6 @@ export const SocialMedia = () => {
           );
         })}
       </ul>
-    </section>
+    
   );
 };

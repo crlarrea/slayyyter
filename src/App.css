@@ -58,7 +58,6 @@ main div:last-of-type {
   flex-flow: column nowrap;
   row-gap: 48px;
   overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 .background {
@@ -149,20 +148,20 @@ main div:last-of-type {
 }
 
 .social-media {
+  position: absolute;
+  bottom: 72px;
   color: rgba(255, 255, 255, 0.5);
   font-size: 21px;
-}
-.social-media ul {
   display: flex;
   justify-content: flex-end;
   list-style-type: none;
   column-gap: 14px;
 }
-.social-media ul li:hover {
+.social-media li:hover {
   transform: scale(1.2);
   color: white;
 }
-.social-media ul li a {
+.social-media li a {
   color: inherit;
   text-decoration: none;
 }
