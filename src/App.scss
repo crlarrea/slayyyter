@@ -104,6 +104,7 @@ main {
     &:nth-of-type(2) {
       flex: 0 0 100%;
       flex-flow: row wrap;
+      column-gap: $h;
 
       cursor: pointer;
 
@@ -111,7 +112,11 @@ main {
         height: auto;
         overflow: visible;
         img {
+          transition: all 0.3s;
           width: 250px;
+          &:hover{
+            transform: scale(1.1);
+          }
         }
       }
     }

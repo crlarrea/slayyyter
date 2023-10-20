@@ -108,6 +108,7 @@ main div:last-of-type::-webkit-scrollbar {
 .vinyls article:nth-of-type(2) {
   flex: 0 0 100%;
   flex-flow: row wrap;
+  column-gap: 48px;
   cursor: pointer;
 }
 .vinyls article:nth-of-type(2) div {
@@ -115,7 +116,11 @@ main div:last-of-type::-webkit-scrollbar {
   overflow: visible;
 }
 .vinyls article:nth-of-type(2) div img {
+  transition: all 0.3s;
   width: 250px;
+}
+.vinyls article:nth-of-type(2) div img:hover {
+  transform: scale(1.1);
 }
 .vinyls article:last-of-type {
   flex: 0 0 100%;
