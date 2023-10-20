@@ -80,12 +80,26 @@
   }
 
   .tours {
+    
     table {
+      
+      row-gap: $xl;
+
       th {
         display: none;
       }
+      tbody{
+        display: flex;
+        flex-flow: row wrap;
+        row-gap:$xl;
+
+      }
       tr {
         flex-flow: row wrap;
+        justify-content: flex-start;
+        column-gap: $xxl;
+
+
       }
     }
   }

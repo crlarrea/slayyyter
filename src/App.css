@@ -317,11 +317,21 @@ footer a {
   .vinyls article:nth-of-type(2)::-webkit-scrollbar {
     display: none;
   }
+  .tours table {
+    row-gap: 21px;
+  }
   .tours table th {
     display: none;
   }
+  .tours table tbody {
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 21px;
+  }
   .tours table tr {
     flex-flow: row wrap;
+    justify-content: flex-start;
+    column-gap: 36px;
   }
 }
 
