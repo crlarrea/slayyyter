@@ -1,13 +1,35 @@
 @media only screen and (min-device-width: 220px) and (max-device-width: 767px) {
+  #root {
+    background: {
+      size: 250px;
+    }
+  }
   main {
     flex-flow: column nowrap;
-    height: auto;
-
     padding: $s;
-    div{
-        &:last-of-type{
-            padding-top:0;
+    div {
+      
+      &:first-of-type {
+        flex: 0 0 30vh;
+
+        section {
+          &:last-of-type {
+            
+            p {
+              position: absolute;
+              top: 30%;
+              right: $s;
+              a {
+                color: rgba(white, 0.7);
+              }
+            }
+          }
         }
+      }
+      &:last-of-type {
+        flex: 0 0 auto;
+        padding-top: 0;
+      }
     }
   }
 
@@ -20,31 +42,51 @@
     }
   }
 
-  .about{
-    article{
-        padding:{
-            right: $xxs;
-            bottom:$xxl;
+  .about {
+    article {
+      padding: {
+        right: $xxs;
+        bottom: $xxl;
+      }
+      p {
+        margin: {
+          bottom: $xh;
         }
-        p{
-            margin:{
-                
-                bottom:$xh;
-            }
-        }
-        
+      }
     }
-    background:{
-        size: contain;
-        position: 0 100%;
+    background: {
+      size: contain;
+      position: 0 100%;
     }
   }
+
+  header {
+    padding: $s;
+  }
   .social-media {
-    top:$m;
-    right:$m;
-    
-        flex-flow: column nowrap;
-        justify-content: flex-start;
-    
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+  }
+
+  .vinyls {
+    padding: $h $m;
+    article {
+      &:nth-of-type(2) {
+        flex-flow: row nowrap;
+        overflow-x: scroll;
+        @include hideScrollbar;
+      }
+    }
+  }
+
+  .tours {
+    table {
+      th {
+        display: none;
+      }
+      tr {
+        flex-flow: row wrap;
+      }
+    }
   }
 }

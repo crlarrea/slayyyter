@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { albums } from "../assets/data/Data";
 
 export const Vinyls = () => {
-  const [currentSelection, setSelection] = useState();
+  const [currentSelection, setSelection] = useState(albums[0]);
   const updateAlbum = (entry) => {
     setSelection(entry);
   };
@@ -20,8 +20,7 @@ export const Vinyls = () => {
                 updateAlbum(entry);
               }}
             >
-              <img src={entry.image} loading="lazy"/>
-              {/* <p>{entry.name}</p> */}
+              <img src={entry.image} loading="lazy" />
             </div>
           );
         })}
@@ -43,7 +42,9 @@ export const Vinyls = () => {
                 );
               })}
             </ol>
-            <a href="#">buy</a>
+            <a href="#" className="btn">
+              buy
+            </a>
           </>
         )}{" "}
       </article>

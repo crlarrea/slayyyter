@@ -7,144 +7,132 @@
 }
 
 body {
-  background-color: black;
+  background-color: $black;
+  color: white;
   font: {
     family: "Roboto Regular";
     size: $m;
   }
 }
 
-main {
+#root {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  padding: $xh;
-  background-color: black;
+  flex-flow: column nowrap;
+
   height: 100vh;
-  overflow: hidden;
-  color: white;
 
-  div {
-    height: 100vh;
-    @include hideScrollbar;
-    display: flex;
-    &:first-of-type {
-      flex: 0 0 30%;
-    }
-    &:last-of-type {
-      
-      filter: drop-shadow(20px 20px 250px rgba($pink900, 0.4));
-      flex: 0 0 50%;
-      flex-flow: column nowrap;
-      row-gap: $h;
-      overflow-y: scroll;
-      padding-top: 350px;
-    }
-  }
-}
-
-// iframe {
-//   filter: drop-shadow(20px 20px 250px rgba($pink900, 0.2));
-// }
-.background {
-  flex: 0 0 30%;
   background: {
     image: url("../src/assets/img/slayyyter_logo.png");
     repeat: no-repeat;
     size: contain;
   }
+}
 
+header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: $h;
+}
+main {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: $h;
+
+  margin-top: $xh;
+
+  div {
+    display: flex;
+
+    &:first-of-type {
+      flex-flow: column nowrap;
+      flex: 0 0 30%;
+      filter: drop-shadow(20px 20px 250px rgba($pink900, 1));
+
+      section {
+        &:last-of-type {
+          flex: 0 0 100%;
+
+          p {
+            writing-mode: vertical-lr;
+            transform: scale(-1);
+            a {
+              color: white;
+              text: {
+                decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    &:last-of-type {
+      filter: drop-shadow(20px 20px 250px rgba($pink900, 0.4));
+      flex: 0 0 50%;
+      flex-flow: column nowrap;
+      row-gap: $h;
+      overflow-y: scroll;
+      @include hideScrollbar;
+    }
+  }
+}
+
+.background {
   img {
-    height: 110%;
+    height: 100vh;
     animation: slideRight 15s linear forwards;
   }
 }
 
 .vinyls {
-  flex: 0 0 60%;
-  background-color: rgba(white, 0.1);
-  border-radius: $xxs;
+  z-index: 1;
   display: flex;
   flex-flow: row wrap;
+  background: {
+    color: rgba(white, 0.1);
+  }
+  border-radius: $xxs;
   padding: $h;
-  column-gap: $h;
+
   article {
     display: flex;
+
     &:first-of-type {
       flex: 0 0 100%;
     }
-
-    row-gap: $m;
     &:nth-of-type(2) {
-      flex-flow: row nowrap;
-      column-gap: $m;
-      overflow-x: scroll;
+      flex: 0 0 100%;
+      flex-flow: row wrap;
 
-      @include hideScrollbar;
+      cursor: pointer;
+
       div {
-        height: 250px;
-        p {
-          text: {
-            transform: capitalize;
-          }
-        }
+        height: auto;
+        overflow: visible;
         img {
-          cursor: pointer;
           width: 250px;
-          height: 250px;
-
-          &:hover {
-            transition: all 0.3s;
-            transform: scale(1.1);
-          }
         }
       }
     }
-
     &:last-of-type {
       flex: 0 0 100%;
-      display: flex;
       flex-flow: column nowrap;
-      align-items: flex-start;
-
-      h3 {
-        font: {
-          family: "Roboto Black";
-        }
-        text: {
-          transform: capitalize;
-        }
-      }
+      justify-content: space-between;
+      row-gap: $m;
       span {
-        padding: $xxs;
-        align-self: flex-start;
         border: 2px dashed white;
+        align-self: flex-start;
+        padding: $xxs $m;
       }
       ol {
         list-style-position: inside;
-      }
-      a {
-        align-self: flex-end;
-        transition: all 0.3s;
-        color: white;
-        text: {
-          decoration: none;
-          transform: uppercase;
-        }
-        border: 2px solid white;
-        padding: $xxs $xxl;
-        &:hover {
-          background-color: white;
-          color: $black;
-        }
       }
     }
   }
 }
 
 .social-media {
-  position: absolute;
-  bottom: $xh;
   color: rgba(white, 0.5);
   font: {
     size: $xl;
@@ -168,9 +156,8 @@ main {
   }
 }
 
-.spotify {
-}
 .about {
+  z-index: 1;
   display: flex;
   border-radius: $xxs;
   background: {
@@ -210,25 +197,46 @@ main {
       line-height: $xl;
       border-left: 2px solid rgba($pink900, 0.6);
     }
-    a {
-      align-self: flex-end;
-      transition: all 0.3s;
-      color: white;
-      text: {
-        decoration: none;
-        transform: uppercase;
-      }
-      border: 2px solid white;
-      padding: $xxs $xxl;
-      &:hover {
-        background-color: white;
-        color: $black;
-      }
-    }
   }
 }
 
 .tours {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: $h;
+
+  table {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: left;
+
+    row-gap: $m;
+    th {
+      flex: 0 0 150px;
+      text: {
+        transform: capitalize;
+      }
+      font: {
+        size: $xl;
+      }
+    }
+
+    tr {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+
+      td {
+        flex: 0 0 150px;
+        &:last-of-type {
+          font: {
+            size: $xs;
+          }
+          color: $pink500;
+        }
+      }
+    }
+  }
 }
 h2 {
   text: {
@@ -237,6 +245,43 @@ h2 {
   font: {
     size: $xxl;
     family: "Roboto Black";
+  }
+}
+
+h3 {
+  font: {
+    family: "Roboto Black";
+    size: $xxl;
+  }
+  text: {
+    transform: capitalize;
+  }
+}
+
+.btn {
+  align-self: flex-end;
+  transition: all 0.3s;
+  color: white;
+  text: {
+    decoration: none;
+    transform: uppercase;
+  }
+  border: 2px solid white;
+  padding: $xxs $xxl;
+  &:hover {
+    background-color: white;
+    color: $black;
+  }
+}
+
+footer {
+  display: flex;
+  padding: $xh;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    color: white;
   }
 }
 @keyframes slideRight {

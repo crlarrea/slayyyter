@@ -15,7 +15,7 @@ export const About = () => {
           growing online following, Slayyyter has become a rising star in the
           modern pop music scene.
         </p>
-        <a href='#tours'>tour</a>
+        <a href='#tours' className="btn">tour</a>
       </article>
     </section>
   );
