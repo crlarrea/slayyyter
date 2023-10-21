@@ -20,7 +20,7 @@ export const Vinyls = () => {
                 updateAlbum(entry);
               }}
             >
-              <img src={entry.image} loading="lazy" />
+              <img src={entry.image} alt={entry.name} loading="lazy" />
             </div>
           );
         })}

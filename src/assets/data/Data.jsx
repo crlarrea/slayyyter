@@ -4,10 +4,10 @@ import {
   AiOutlineInstagram,
 } from "react-icons/ai";
 
-import vinyl1 from "../img/vinyl_1.png";
-import vinyl2 from "../img/vinyl_2.png";
-import vinyl3 from "../img/vinyl_3.png";
-import cd1 from "../img/cd.png";
+import vinyl1 from "../img/vinyl_1.webp";
+import vinyl2 from "../img/vinyl_2.webp";
+import vinyl3 from "../img/vinyl_3.webp";
+import cd1 from "../img/cd.webp";
 const socialMedia = [
   {
     name: "webs",

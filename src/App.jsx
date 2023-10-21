@@ -8,16 +8,20 @@ function App() {
   return (
     <>
       <header>
-      <SocialMedia />
+        <SocialMedia />
       </header>
       <main>
         <Home />
       </main>
       <footer>
         <article>
-        <p>Official page: <a href='https://www.slayyyter.com/' target='_blank'>www.slayyyter.com</a></p>
+          <p>
+            Official page:{" "}
+            <a href="https://www.slayyyter.com/" target="_blank">
+              www.slayyyter.com
+            </a>
+          </p>
         </article>
-        
       </footer>
     </>
   );

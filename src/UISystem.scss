@@ -22,20 +22,24 @@ $black: #0e0e0e;
 // Fonts
 @font-face {
   font-family: "Homemade Apple Regular";
-  src: url("./assets/fonts/HomemadeApple-Regular.ttf");
+  src: url("./assets/fonts/HomemadeApple-Regular.ttf"), local('courier');
+  font-display: swap;
 }
 @font-face {
   font-family: "Roboto Regular";
-  src: url("./assets/fonts/Roboto-Regular.ttf");
+  src: url("./assets/fonts/Roboto-Regular.ttf"), local('courier');
+  font-display: swap;
 }
 @font-face {
   font-family: "Roboto Black";
-  src: url("./assets/fonts/Roboto-Black.ttf");
+  src: url("./assets/fonts/Roboto-Black.ttf"), local('courier');
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Roboto Bold Italic";
-  src: url("./assets/fonts/Roboto-BoldItalic.ttf");
+  src: url("./assets/fonts/Roboto-BoldItalic.ttf"), local('courier');
+  font-display: swap;
 }
 @mixin hideScrollbar {
   /* Hide scrollbar for Chrome, Safari and Opera */

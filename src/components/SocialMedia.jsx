@@ -7,7 +7,7 @@ export const SocialMedia = () => {
         {socialMedia.map((entry) => {
           return (
             <li key={entry.name}>
-              <a href={entry.url} target="_blank">
+              <a href={entry.url} target="_blank" aria-label={entry.name}>
                 {entry.icon}
               </a>
             </li>
