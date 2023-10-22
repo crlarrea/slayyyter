@@ -6,6 +6,11 @@
   scroll-behavior: smooth;
 }
 
+html{
+  margin-left:  calc(100vw - 100%);
+  // overflow-y: scroll;
+
+}
 body {
   background-color: $black;
   color: white;
