@@ -114,7 +114,7 @@ main div:last-of-type::-webkit-scrollbar {
 .vinyls article:nth-of-type(2) {
   flex: 0 0 100%;
   flex-flow: row wrap;
-  column-gap: 48px;
+  column-gap: 16px;
   cursor: pointer;
 }
 .vinyls article:nth-of-type(2) div {

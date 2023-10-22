@@ -107,7 +107,7 @@ main {
     &:nth-of-type(2) {
       flex: 0 0 100%;
       flex-flow: row wrap;
-      column-gap: $h;
+      column-gap: $m;
       cursor: pointer;
 
       div {
