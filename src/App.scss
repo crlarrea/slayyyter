@@ -187,6 +187,7 @@ main {
     display: flex;
     flex-flow: column nowrap;
     row-gap: $m;
+    border-radius: $xxs;
 
     padding: $h;
     background-color: rgba($black, 0.5);
